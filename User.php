@@ -5,7 +5,7 @@ class User {
     public $name;
     public $lastname;
     public $address;
-    public $registered; //booleano
+    public $registered; //booleano, registrato sì o no
     public $sconto = 0;
 
     private function setSconto () {
