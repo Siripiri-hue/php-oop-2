@@ -13,4 +13,6 @@ class Product {
         $this->categories = $cat;
         $this->available_quantity = $_quantity;
     }
+
+    // eventually add remove category
 }

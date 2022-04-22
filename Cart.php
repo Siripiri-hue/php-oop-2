@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ 'Product.php';
+// require __DIR__ . '/product.php';
 
 class Cart {
     public $items_num = 0; //quantità totale dei prodotti
@@ -8,8 +8,15 @@ class Cart {
     public $products = [];
     public $subtotal;
 
-    public function addItem ($_product) {
-        $this->product = $_product;
-        array_push($this->product);
+    public function addItem ($_product, $_quantity = 1) {
+
+        //aggiungere controllo se prodotto esiste già
+
+        // array_push($this->products, $_product);
+
+        $this->products = [
+            'item' => $_product,
+            'quantity' => $_quantity,
+        ];
     }
 }
