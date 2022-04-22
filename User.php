@@ -11,15 +11,16 @@ class User {
     public $lastname;
     public $address;
     // public $registered; //booleano, registrato sì o no
-    public $sconto = 0;
+    public $discount;
     public $cart;
     public $payments = [];
 
-    function __construct (string $_email, string $_name, string $_lastname) {
+    function __construct (string $_email, string $_name, string $_lastname, float $_discount = 0) {
         $this->email = $_email;
         $this->name = $_name;
         $this->lastname = $_lastname;
         // $this->cart = new Cart();
+        $this->discount = $_discount;
     }
 
     // eventualmente aggiungere set/get sconto, con opportuni controlli
