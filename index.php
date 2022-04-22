@@ -5,6 +5,7 @@
 include __DIR__ . '/user.php';
 include __DIR__ . '/product.php';
 include __DIR__ . '/cart.php';
+include __DIR__ . '/payment.php';
 
 // creo istanze di prodotti
 
@@ -31,4 +32,14 @@ $pippo = new User ('goofy@gmail.com', 'Goofy', 'Goof');
 $paperino = new User ('donalduck@gmail.com', 'Donald', 'Duck');
 
 var_dump($pippo);
+var_dump($paperino);
+
+//creo istanza di metodo di pagamento
+
+$card = new Payment ('4020369815987412', 'Donald Duck', '159', '06/2025');
+
+//aggiungo metodo di pagamento all'utente
+
+$paperino->setPaymentMethod($card);
+
 var_dump($paperino);
