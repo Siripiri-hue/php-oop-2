@@ -18,15 +18,17 @@ $sassi_acquario = new Product ('Come nell\'oceano', 0.50, ['accessori', 'acquari
 // var_dump($gabbietta_small);
 // var_dump($sassi_acquario);
 
-//creo istanze di utenti
-
-$pippo = new User ('goofy@gmail.com', true);
-$paperino = new User ('donalduck@gmail.com', false);
-
-var_dump($pippo);
-var_dump($paperino);
+//creo istanza del carrello e lo riempo con prodotti
 
 $cart = new Cart();
 $cart->addItem($sassi_acquario);
 $cart->addItem($gabbietta_small);
 var_dump($cart);
+
+//creo istanze di utenti
+
+$pippo = new User ('goofy@gmail.com', 'Goofy', 'Goof');
+$paperino = new User ('donalduck@gmail.com', 'Donald', 'Duck');
+
+var_dump($pippo);
+var_dump($paperino);

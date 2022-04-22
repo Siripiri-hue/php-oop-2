@@ -8,6 +8,7 @@ class Cart {
     public $products = [];
     public $subtotal;
 
+    // fn che aggiunge al carrello i prodotti
     public function addItem ($_product, $_quantity = 1) {
 
         //aggiungere controllo se prodotto esiste già
@@ -19,4 +20,6 @@ class Cart {
             'quantity' => $_quantity,
         ];
     }
+
+    // eventually add remove item
 }
